@@ -1,0 +1,53 @@
+# 系统垃圾
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+
+# 编辑器配置
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 密码 / 密钥(永远要加!)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Claude Code / oh-my-claudecode 本地配置
+.claude/
+.omc/
+.agents/
+
+# 日志
+*.log
+logs/
+
+# Node 依赖
+node_modules/
+package-lock.json.bak
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# 输出(脚本跑出的结果,放 output/ 不入仓库)
+output/
+results/
+*.csv.tmp
+
+# 大文档(脚本项目不存这些)
+*.pptx
+*.xlsx
+*.pdf

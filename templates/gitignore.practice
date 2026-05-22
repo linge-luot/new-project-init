@@ -1,0 +1,76 @@
+# 系统垃圾
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+
+# 编辑器配置
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 密码 / 密钥(永远要加!)
+.env
+.env.*
+.env.local
+!.env.example
+*.pem
+*.key
+
+# Claude Code / oh-my-claudecode 本地配置
+.claude/
+.omc/
+.agents/
+
+# 日志
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+
+# Node
+node_modules/
+.pnpm-store/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# 构建产物
+dist/
+build/
+.next/
+.nuxt/
+out/
+.cache/
+
+# 测试
+coverage/
+
+# 浏览器自动化(Playwright 等)
+playwright-report/
+test-results/
+
+# 输出 / 数据
+output/
+results/
+data/*.csv
+data/*.xlsx
+*.tmp.csv
+
+# 大文档(独立资料放桌面)
+*.pptx
+*.ppt
+*.xlsx
+*.xls
+*.pdf
+*.docx
