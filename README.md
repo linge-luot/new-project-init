@@ -20,8 +20,10 @@
 | 工具 | 检查命令 | 没装怎么办 |
 |---|---|---|
 | Claude Code | `claude --version` | https://claude.com/claude-code 下载 |
-| `gh` CLI | `gh --version` | `brew install gh` 然后 `gh auth login` |
-| `git` | `git --version` | Mac 自带,没的话 `brew install git` |
+| `gh` CLI | `gh --version` | macOS: `brew install gh` · Windows: `winget install GitHub.cli` · 然后 `gh auth login` |
+| `git` | `git --version` | macOS/Windows: 一般自带,没的话 `brew install git` / `winget install Git.Git` |
+
+**支持平台**:macOS · Linux · Windows(WSL)。Skill 在 Step 0 自动检测平台,Windows/WSL 上会用 Windows 真桌面 `/mnt/c/Users/<你>/Desktop`,不是 WSL 内部假桌面。
 
 ### 一行命令装上
 
@@ -125,9 +127,10 @@ new-project-init/
 
 ## ⚠️ 已知限制
 
-- 项目固定建在 `~/Desktop/<NAME>`,不支持其他路径(简化逻辑)
+- 项目固定建在系统桌面 `<DESKTOP>/<NAME>`(macOS/Linux 是 `~/Desktop`,Windows/WSL 是 `/mnt/c/Users/<你>/Desktop`),不支持其他路径(简化逻辑)
 - GitHub 仓库建在你 `gh auth login` 的账号下,不支持组织
 - `gh` 必须先 `gh auth login` + 有 `repo` scope(若想后续删仓库还需要 `delete_repo` scope:`gh auth refresh -h github.com -s delete_repo`)
+- Windows 用户:Skill 必须在 **WSL 里的 Claude Code** 跑(原生 cmd / PowerShell 不行),因为 skill 用了 bash 语法
 
 ---
 
